@@ -6,9 +6,20 @@
  *
 */
 
+
 function capitalize(str) {
-    // Напишите код здесь
-}
+    const strWords = str.split(' ');
+    let collectedStr = '';
+
+    for (i = 0; i < strWords.length; i++) {
+      const firstLetter = strWords[i].slice(0, 1).toUpperCase();
+      const secondLetters = strWords[i].slice(1);
+      const finishedWord = firstLetter + secondLetters;
+      collectedStr += finishedWord + ' ';
+    };
+    const finishedStr = collectedStr.slice(0, -1);
+    return finishedStr;
+};
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

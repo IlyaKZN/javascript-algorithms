@@ -9,8 +9,14 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    let fibonacciArray = [0, 1];
+    for (i = 2; i <  n; i++) {
+        let number = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+        fibonacciArray.splice(i, 0, number);
+    }
+    return fibonacciArray[n-1];
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

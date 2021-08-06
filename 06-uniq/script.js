@@ -7,9 +7,17 @@
  * 
 */
 
+
 function uniq(arr) {
-    // Напишите код здесь
+    let newArr = [];
+    arr.forEach((number, index) => {
+        if(arr.indexOf(number) !== -1 && arr.indexOf(number) === index) {
+            newArr.splice(0, 0, number);
+        }
+    })
+    return newArr;
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

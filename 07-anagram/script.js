@@ -9,8 +9,23 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+    let anagramBool = new Boolean;
+    str1 = str1.toLowerCase().split('');
+    str2 = str2.toLowerCase().split('');
+    if (str1.join() !== str2.join()) {
+        str1 = str1.sort();
+        str2 = str2.sort();
+        if (str1.join() === str2.join()) {
+            anagramBool = true;
+        } else {
+            anagramBool = false;
+        }
+    } else {
+        anagramBool = false;
+    }
+    return anagramBool;
 }
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

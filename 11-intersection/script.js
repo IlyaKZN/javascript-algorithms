@@ -8,7 +8,15 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    let newArray = [];
+    arr2.forEach((number) => {
+        if (arr1.indexOf(number) !== -1) {
+            if (newArray.indexOf(number) === -1) {
+            newArray.splice(0, 0, number);
+            }
+        }
+    });
+    return newArray;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

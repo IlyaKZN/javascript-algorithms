@@ -7,7 +7,23 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let numberZeros = 0;
+    let numbers = [];
+
+    for (i = 1; i <= n; i++) {
+        numbers.splice(0, 0, i);
+    }
+
+    numbers.forEach((number) => {
+        number = String(number);
+        num = number.split('');
+        num.forEach((m) => {
+            if (m === '0') {
+                numberZeros++;
+            }
+        })   
+    })
+    return numberZeros;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
